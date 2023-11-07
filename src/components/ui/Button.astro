@@ -1,3 +1,25 @@
-<button class="bg-accent text-primary px-4 py-2 rounded hover:bg-accent-focus">
+---
+interface Props {
+	type?: "primary" | "secondary" | "accent" | "dark";
+    size?: "sm" | "md" | "lg";
+}
+
+const { type = "accent", size = "md" } = Astro.props;
+---
+
+<button class:list={[
+    "px-4 py-2 rounded",
+    {
+        "bg-accent text-primary hover:bg-accent-focus active:bg-accent-active": type === "accent",
+        "bg-primary text-dark hover:bg-primary-focus active:bg-primary-active": type === "primary",
+        "bg-secondary text-dark hover:bg-secondary-focus active:bg-secondary-active": type === "secondary",
+        "bg-dark text-primary hover:bg-dark-focus active:bg-dark-active": type === "dark",
+    },
+    {
+        "text-sm": size === "sm",
+        "text-base": size === "md",
+        "text-lg": size === "lg",
+    },
+]}>
     <slot />
 </button>

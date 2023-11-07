@@ -1,6 +1,6 @@
 <div align="center">
 
-# Astro + Solid.js
+# Astro 🚀 + Solid.js
 
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/joacod/astro-solidjs/blob/main/LICENSE)
 

@@ -8,7 +8,7 @@ const { type = "accent", size = "md" } = Astro.props;
 ---
 
 <button class:list={[
-    "px-4 py-2 rounded",
+    "flex justify-center space-x-1 px-4 py-2 rounded",
     {
         "bg-accent text-primary hover:bg-accent-focus active:bg-accent-active": type === "accent",
         "bg-primary text-dark hover:bg-primary-focus active:bg-primary-active": type === "primary",
@@ -21,5 +21,7 @@ const { type = "accent", size = "md" } = Astro.props;
         "text-lg": size === "lg",
     },
 ]}>
-    <slot />
+    <slot name="before" />
+    <p><slot /></p>
+    <slot name="after" />
 </button>

@@ -1,7 +1,9 @@
 ---
+import { Items } from "@/components/Items";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-  <h1 class="text-xl font-bold">Hello world!</h1>
+  <h1 class="text-xl font-bold">Home</h1>
+  <Items client:load />
 </Layout>

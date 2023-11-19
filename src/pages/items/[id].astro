@@ -1,4 +1,5 @@
 ---
+import { Counter } from "@/components/Counter";
 import Layout from "@/layouts/Layout.astro";
 
 const { id } = Astro.params;
@@ -8,5 +9,6 @@ export const prerender = false;
 ---
 
 <Layout title={`Item ${id}`}>
-  <h1>Items id: {id}</h1>
+  <h1 class="text-xl font-bold">Items id: {id}</h1>
+  <Counter client:load />
 </Layout>

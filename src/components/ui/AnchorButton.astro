@@ -1,13 +1,15 @@
 ---
 interface Props {
+  href: string;
   type?: "primary" | "secondary" | "accent" | "dark";
   size?: "sm" | "md" | "lg";
 }
 
-const { type = "accent", size = "md" } = Astro.props;
+const { type = "accent", size = "md", href } = Astro.props;
 ---
 
-<button
+<a
+  href={href}
   class:list={[
     "flex items-center justify-center space-x-1 px-4 py-2 rounded",
     {
@@ -30,4 +32,4 @@ const { type = "accent", size = "md" } = Astro.props;
   <slot name="before" />
   <p><slot /></p>
   <slot name="after" />
-</button>
+</a>

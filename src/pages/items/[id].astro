@@ -1,0 +1,12 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const { id } = Astro.params;
+
+// TODO: decide later if i want this page to be static or ssr
+export const prerender = false;
+---
+
+<Layout title={`Item ${id}`}>
+  <h1>Items id: {id}</h1>
+</Layout>

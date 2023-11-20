@@ -1,0 +1,35 @@
+---
+interface Props {
+  href: string;
+  type?: "primary" | "secondary" | "accent" | "dark";
+  size?: "sm" | "md" | "lg";
+}
+
+const { type = "accent", size = "md", href } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "flex items-center justify-center space-x-1 px-4 py-2 rounded",
+    {
+      "bg-accent text-primary hover:bg-accent-focus active:bg-accent-active":
+        type === "accent",
+      "bg-primary text-dark hover:bg-primary-focus active:bg-primary-active":
+        type === "primary",
+      "bg-secondary text-dark hover:bg-secondary-focus active:bg-secondary-active":
+        type === "secondary",
+      "bg-dark text-primary hover:bg-dark-focus active:bg-dark-active":
+        type === "dark",
+    },
+    {
+      "text-sm": size === "sm",
+      "text-base": size === "md",
+      "text-lg": size === "lg",
+    },
+  ]}
+>
+  <slot name="before" />
+  <p><slot /></p>
+  <slot name="after" />
+</a>

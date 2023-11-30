@@ -1,12 +1,6 @@
 import type { Item } from "@/models/item";
 
-export async function GET({ request }: { request: string }) {
-  return new Response(JSON.stringify({ items }), {
-    headers: { "content-type": "application/json" },
-  });
-}
-
-const items: Item[] = [
+export const items: Item[] = [
   {
     id: 1,
     name: "Item 1",

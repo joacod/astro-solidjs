@@ -5,7 +5,8 @@ export const Counter = () => {
 
   return (
     <div>
-      <p>Counter value: {counter()}</p>
+      <h2 class="text-3xl title-font font-medium mb-2">Counter</h2>
+      <p>Value: {counter()}</p>
       <div class="flex space-x-1">
         <button
           class="px-4 py-2 rounded bg-accent text-primary hover:bg-accent-focus active:bg-accent-active"

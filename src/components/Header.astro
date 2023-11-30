@@ -1,15 +1,21 @@
 ---
 import AnchorButton from "@/components-ui/AnchorButton.astro";
 import HomeIcon from "@/icons/Home.astro";
+import PlusIcon from "@/icons/Plus.astro";
 ---
 
 <nav
-  class="fixed top-0 z-50 w-full bg-dark text-primary text-center shadow-lg p-5"
+  class="fixed top-0 z-50 w-full bg-dark opacity-95 text-primary text-center shadow-lg p-5"
 >
   <div class="flex justify-start items-center space-x-2">
+    <img src="/cap.png" width="50" height="50" class="mr-3" alt="Cap Store" />
     <AnchorButton href="/" type="secondary">
       <HomeIcon />
+      <span slot="after">Home</span>
     </AnchorButton>
-    <p>My nav</p>
+    <AnchorButton href="/counter" type="secondary">
+      <PlusIcon />
+      <span slot="after">Counter</span>
+    </AnchorButton>
   </div>
 </nav>

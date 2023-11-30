@@ -1,0 +1,31 @@
+---
+import type { Item } from "@/models/item";
+
+interface Props {
+  item: Item;
+}
+
+const { item } = Astro.props;
+const { id, name, description, imageUrl, price } = item;
+---
+
+<div class="xl:w-1/4 md:w-1/2 p-4" transition:name=`item ${id} card`>
+  <div class="bg-gray-800 p-6 rounded-lg">
+    <img
+      class="h-40 rounded w-full object-cover object-center mb-6"
+      src={imageUrl}
+      alt="content"
+      transition:name=`item ${id} image`
+    />
+    <h3 class="tracking-widest text-indigo-400 text-xs font-medium title-font">
+      PRICE: ${price}
+    </h3>
+    <h2 class="text-lg text-white font-medium title-font mb-4">
+      {name}
+    </h2>
+    <p class="leading-relaxed text-base mb-4">{description}</p>
+    <a class="underline" href={"/items/" + id}>
+      {name}
+    </a>
+  </div>
+</div>

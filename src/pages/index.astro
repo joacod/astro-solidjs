@@ -1,8 +1,14 @@
 ---
-import { Items } from "@/components/Items";
 import Layout from "@/layouts/Layout.astro";
+import ItemCard from "@/components/ItemCard.astro";
+import { items } from "@/lib/data";
+// import { ItemsSolid } from "@/components/ItemsSolid";
 ---
 
 <Layout title="Cap Store - Items">
-  <Items client:load />
+  <h2 class="text-3xl title-font font-medium mb-2">Cap store - Items</h2>
+  <section class="flex flex-wrap -m-4 text-gray-400 body-font mt-2">
+    {items.map((item) => <ItemCard item={item} />)}
+  </section>
+  <!-- <ItemsSolid /> -->
 </Layout>

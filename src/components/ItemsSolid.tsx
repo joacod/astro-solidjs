@@ -1,7 +1,7 @@
 import type { Item } from "@/models/item";
 import { createSignal, createEffect, onCleanup, For } from "solid-js";
 
-export const Items = () => {
+export const ItemsSolid = () => {
   const [data, setData] = createSignal<Item[]>([]);
 
   createEffect(() => {

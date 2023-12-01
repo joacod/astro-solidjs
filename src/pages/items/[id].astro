@@ -4,7 +4,6 @@ import { items } from "@/lib/data";
 
 const { id } = Astro.params;
 
-export const prerender = false;
 const item = items.find((item) => item.id.toString() === id);
 ---
 

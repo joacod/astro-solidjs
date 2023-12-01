@@ -4,7 +4,6 @@ import { items } from "@/lib/data";
 
 const { id } = Astro.params;
 
-export const prerender = false;
 const item = items.find((item) => item.id.toString() === id);
 ---
 
@@ -25,10 +24,13 @@ const item = items.find((item) => item.id.toString() === id);
           <h2 class="text-sm title-font text-gray-500 tracking-widest">
             BRAND NAME
           </h2>
-          <h1 class="text-white text-3xl title-font font-medium mb-1">
+          <h1
+            class="text-white text-3xl title-font font-medium mb-1"
+            transition:name=`item ${id} name`
+          >
             {item?.name}
           </h1>
-          <p class="leading-relaxed">
+          <p class="leading-relaxed" transition:name=`item ${id} description`>
             {item?.description}
           </p>
           <div class="flex border-t-2 border-gray-700 mt-5">

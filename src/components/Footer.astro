@@ -1,10 +1,17 @@
 ---
-
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
   class="bg-accent text-primary text-center p-5 flex justify-center items-center"
 >
+  <p class="mr-3">&copy; 2023-{currentYear}</p>
   <img src="/cap.png" width="40" height="40" />
-  <p class="ml-2">Cap Store</p>
+  <a
+    href="https://github.com/joacod/astro-solidjs"
+    class="ml-3 underline hover:text-secondary"
+    target="_blank"
+  >
+    Cap Store
+  </a>
 </footer>

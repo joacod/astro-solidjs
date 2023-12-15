@@ -1,15 +1,17 @@
 ---
 interface Props {
   href: string;
+  target?: "_blank" | "_self" | "_parent" | "_top";
   type?: "primary" | "secondary" | "accent" | "dark";
   size?: "sm" | "md" | "lg";
 }
 
-const { type = "accent", size = "md", href } = Astro.props;
+const { type = "accent", size = "md", href, target } = Astro.props;
 ---
 
 <a
   href={href}
+  target={target}
   class:list={[
     "flex items-center justify-center space-x-1 px-4 py-2 rounded",
     {

@@ -1,7 +1,8 @@
 <div align="center">
 
-# Astro 🚀 + Solid.js
+# Cap Store 🧢
 
+[![Vercel](https://vercelbadge.vercel.app/api/joacod/astro-solidjs)](https://cap-store-six.vercel.app/)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/joacod/astro-solidjs/blob/main/LICENSE)
 
 [![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)](https://pnpm.io/)
@@ -12,7 +13,7 @@
 
 ## 👋 Introduction
 
-Project created using [pnpm](https://pnpm.io/), [Astro 🚀](https://astro.build/), [Solidjs](https://www.solidjs.com/) and [Tailwind CSS](https://tailwindcss.com/)
+Project created using [pnpm](https://pnpm.io/), [Astro](https://astro.build/) 🚀, [Solidjs](https://www.solidjs.com/) and [Tailwind CSS](https://tailwindcss.com/)
 
 ## 💻 Development
 

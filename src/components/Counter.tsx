@@ -5,7 +5,7 @@ export const Counter = () => {
 
   return (
     <div>
-      <h2 class="text-3xl title-font font-medium mb-2">Counter</h2>
+      <h2 class="text-3xl font-title font-medium mt-3 mb-2">Counter</h2>
       <p>Value: {counter()}</p>
       <div class="flex space-x-1">
         <button
